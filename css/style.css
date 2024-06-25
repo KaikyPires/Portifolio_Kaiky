@@ -8,9 +8,9 @@
 
 :root {
     --color-black: #101010;
-    --color-white: #f0f0f0;
-    --color-gray: #5c5c5c;
-    --color-destaque: #1d2adf;
+    --color-white: #242424;
+    --color-gray: #101010;
+    --color-destaque: #080;
 
     --font-title-desktop: 3rem;
     --font-span-desktop: 1.5rem;
@@ -48,7 +48,7 @@ body {
     padding: 1rem;
 }
 
-/************** WIDGET 1*/
+/************** WIDGET 1 */
 .top {
     width: 100%;
     min-width: 350px;
@@ -57,9 +57,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    
 }
 
-/************** Úsuario*/
+/************** Usuário */
 .user {
     width: 100%;
     height: 60%;
@@ -82,12 +83,12 @@ body {
 
 .img-user {
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: center;
 }
 
 .img-user img {
-    width: 120px;
+    width: 1px;
     border-radius: 10px;
 }
 
@@ -101,28 +102,22 @@ body {
 
 .info-user h1 {
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: var(--color-black);
+    color: white;
 }
 
 .info-user span {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: var(--color-destaque);
 }
 
-.info-user p {
-    margin-top: auto; 
-    padding-top: 1rem;
-    font-size: 1rem;
-    color: var(--color-black);
-}
 
-/************** Projeto*/
+/************** Projeto */
 .projeto {
     width: 100%;
-    height: 40%;
+    height: 30%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -132,8 +127,8 @@ body {
 
 .content-projeto {
     width: 100%;
-    max-width: 400px;
-    height: 100%;
+    max-width: 4000px;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +138,7 @@ body {
 .text-projeto {
     font-size: 1.3rem;
     font-weight: 500;
+    font-weight: bold;
     color: var(--color-destaque);
 }
 
@@ -154,7 +150,7 @@ body {
 }
 
 .img-projeto img {
-    width: 280px;
+    width: 400px;
 }
 
 .btn-projeto {
@@ -175,7 +171,7 @@ body {
     text-decoration: none;
 }
 
-/************** WIDGET 2*/
+/************** WIDGET 2 */
 .center {
     min-width: 350px;
     width: 100%;
@@ -186,7 +182,7 @@ body {
     gap: 1.2rem;
 }
 
-/************** Redes sociais*/
+/************** Redes sociais */
 .redes-sociais {
     background-color: transparent;
     width: 100%;
@@ -199,14 +195,16 @@ body {
     gap: 1rem;
 }
 
+
 .box-social {
     background-color: var(--color-destaque);
     height: 90px;
-    width: 90px;
+    width: 180px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
 }
 
 .box-social i {
@@ -214,7 +212,20 @@ body {
     color: var(--color-white);
 }
 
-/************** Skills*/
+.box-social:hover {
+    background-color: var(--color-white); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta em 10% o tamanho */
+}
+
+
+
+.box-social:hover {
+    animation: bounce 0.1s ease;
+}
+
+
+
+/************** Skills */
 .skills {
     width: 100%;
     height: 100%;
@@ -240,23 +251,24 @@ body {
 .skills-icons {
     width: 100%;
     max-width: 90%;
-    gap: 10px;
+    gap: 10px; /* Espaço entre os ícones */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Alinhar os ícones ao centro */
+    flex-wrap: wrap; /* Quebra os ícones para uma nova linha se não couberem */
 }
 
 .skills-icons i {
-    color: var(--color-black);
+    color: white;
     font-size: 1.5rem;
     transition: color 0.3s;
+    margin: 5px; /* Espaço interno em torno de cada ícone */
 }
 
 .skills-icons i:hover {
     cursor: pointer;
 }
 
-/* Cores específicas para cada ícone das skills*/
+/* Cores específicas para cada ícone das skills */
 .skills-icons .fa-html5:hover {
     color: #e34f26;
 }
@@ -269,27 +281,16 @@ body {
     color: #f7df1e;
 }
 
-.skills-icons .fa-bootstrap:hover {
-    color: #7952b3;
-}
-
-.skills-icons .fa-react:hover {
-    color: #61dafb;
-}
-
-.skills-icons .fa-node:hover {
-    color: #339933;
-}
-
-.skills-icons .fa-php:hover {
-    color: #777bb4;
+.skills-icons .fa-java:hover {
+    color: rgb(222, 3, 3);
 }
 
 .skills-icons .fa-github:hover {
     color: #181717;
 }
 
-/************** WIDGET 3*/
+
+/************** WIDGET 3 */
 .bottom {
     width: 100%;
     height: auto;
@@ -299,71 +300,7 @@ body {
     gap: 1.2rem;
 }
 
-/************** Serviços*/
-.servicos {
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-servicos {
-    width: 100%;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-}
-
-.text-servicos h1 {
-    font-size: var(--font-title-mobile);
-    color: var(--color-black);
-}
-
-.text-servicos span {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--color-gray);
-}
-
-.servicos-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.item-servico {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-    width: 100%;
-    max-width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.item-servico i {
-    font-size: 3rem;
-    color: var(--color-destaque);
-}
-
-.item-servico span {
-    font-size: 1.2rem;
-    color: var(--color-black);
-}
-
-/************** Contato*/
+/************** Contato */
 .contato {
     width: 100%;
     border-radius: 10px;
@@ -373,7 +310,7 @@ body {
     justify-content: center;
     text-align: center;
     background-color: var(--color-destaque);
-    padding: 1rem; /* Certificando que a seção de contato tenha padding */
+    padding: 1rem;
 }
 
 .content-contato {
