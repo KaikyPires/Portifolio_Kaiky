@@ -1,4 +1,4 @@
-/* Estilos para telas maiores que 1000px */
+
 @media (min-width: 1000px) {
     body {
         min-height: 100vh; /* Altura mínima da viewport */
@@ -14,22 +14,26 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #000; /* Cor de fundo do container */
+        background-color: #000;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(45, 44, 44, 0.5);
-        width: 400px; /* Largura fixa do container */
-        max-width: 90%; /* Largura máxima do container */
-        min-width: 320px; /* Largura mínima do container */
-        padding: 0.5rem; /* Espaçamento interno */
-    }
+        width: 40%; /* Adjust as needed */
+        max-width: 500px; /* Adjust as needed */
+        padding: 1rem;
+        position: relative; /* Changed from fixed */
+        margin: 0 auto; /* Center the container horizontally */
 
+    }
+    
+}
+    
     /* Estilos para os elementos internos do .container */
     .top, .center, .bottom {
-        width: 90%; /* Largura dos componentes */
+        width: 100%; /* Adjust width as needed */
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem; /* Espaçamento inferior */
+        margin-bottom: 0.7rem; /* Space between sections */
     }
 
     /* Estilos para a seção de usuário */
@@ -39,7 +43,7 @@
         align-items: center;
         text-align: left;
         margin-bottom: 1rem;
-        gap: 1rem; /* Espaçamento entre itens */
+        gap: 0.5rem; /* Espaçamento entre itens */
     }
 
     /* Ajustes na imagem do usuário */
@@ -70,7 +74,7 @@
     .redes-sociais {
         display: flex;
         justify-content: center;
-        gap: 0.8rem; /* Espaçamento entre ícones */
+        gap: 1rem; /* Espaçamento entre ícones */
         margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
@@ -99,7 +103,7 @@
     .skills-icons {
         display: flex;
         justify-content: center;
-        gap: 0.5rem; /* Espaçamento entre ícones */
+        gap: 0.8rem; /* Espaçamento entre ícones */
     }
 
     /* Tamanho e cor dos ícones */
@@ -114,6 +118,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 1rem; /* Espaçamento inferior */
+        width: 100%;
     }
 
     /* Título dos serviços */
@@ -131,45 +136,13 @@
         margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
-    /* Caixa de serviços */
-    .servicos-box {
-        display: flex;
-        gap: 1rem; /* Espaçamento entre itens */
-        justify-content: center;
-    }
-
-    /* Item de serviço */
-    .item-servico {
-        width: 80px; /* Largura do item de serviço */
-        height: 80px; /* Altura do item de serviço */
-        border-radius: 10px; /* Borda arredondada */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #444; /* Cor de fundo */
-        color: #fff; /* Cor do texto */
-        text-align: center;
-        font-size: 0.8rem; /* Tamanho do texto */
-    }
-
-    /* Ícone do serviço */
-    .item-servico i {
-        font-size: 1.2rem; /* Tamanho do ícone */
-        margin-bottom: 0.5rem; /* Espaçamento inferior */
-    }
-
-    /* Texto do serviço */
-    .item-servico span {
-        font-size: 0.8rem; /* Tamanho do texto */
-    }
-
     /* Contato */
     .contato {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 1rem; /* Espaçamento inferior */
+        height: 90%;
     }
 
     /* Título do contato */
@@ -204,4 +177,12 @@
         border-radius: 5px; /* Borda arredondada */
         font-size: 1rem; /* Tamanho do texto */
     }
-}
+    .btn2 {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 20px; /* Exemplo de padding com unidades estáticas */
+        border-radius: 10px;
+        text-decoration: none;
+    }
+

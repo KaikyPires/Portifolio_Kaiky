@@ -48,21 +48,17 @@ body {
     padding: 1rem;
 }
 
-/************** WIDGET 1 */
+/* WIDGET 1 */
 .top {
     width: 100%;
     min-width: 350px;
-    height: 100vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     height: 60%;
-    
-    
 }
 
-/************** Usuário */
 .user {
     width: 100%;
     height: 60%;
@@ -84,16 +80,16 @@ body {
 }
 
 .img-user img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 100px; 
     height: 100px;
-    border-radius: 50%; /* Torna a imagem redonda */
+    border-radius: 50%;
 }
 
 .info-user {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 .info-user h1 {
@@ -109,157 +105,68 @@ body {
     color: var(--color-destaque);
 }
 
-
-/************** Projeto */
-.projeto {
-    width: 100%;
-    height: 30%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-projeto {
-    width: 100%;
-    max-width: 4000px;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-projeto {
-    font-size: 1.3rem;
-    font-weight: 500;
-    font-weight: bold;
-    color: var(--color-destaque);
-}
-
-.img-projeto {
-    padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-projeto img {
-    width: 400px;
-}
-
-.btn-projeto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.btn {
-    background-color: var(--color-destaque);
-    color: var(--color-white);
-    font-weight: 600;
-    padding: .7rem 1.3rem;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-/************** WIDGET 2 */
+/* WIDGET 2 */
 .center {
     min-width: 350px;
     width: 100%;
-    height: 25vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-/************** Redes sociais */
 .redes-sociais {
-    background-color: transparent;
+    display: flex;
     width: 100%;
-    height: 40%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0!important;
-    gap: 1rem;
+    
 }
 
-.box-social1 {
+.box-social1, .box-social2 {
     background-color: var(--color-white);
     height: 90px;
-    width: 180px;
-    border-radius: 10px;
+    flex: 1; /* Cada um ocupa metade do espaço disponível */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s, background-color 0.3s; /* Transição suave de transformação e cor de fundo */
-}
-.box-social2 {
-    background-color: var(--color-white);
-    height: 90px;
-    width: 180px;
+    transition: transform 0.3s, background-color 0.3s;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s, background-color 0.3s; /* Transição suave de transformação e cor de fundo */
 }
 
-.box-social i {
+.box-social1 i, .box-social2 i {
     font-size: 2.5rem;
-    color: var(--color-white);
-    transition: color 0.3s; /* Transição suave da cor do ícone */
+    color: var(--color-black);
 }
 
-.box-social:hover {
-    background-color: var(--color-white); /* Cor de fundo ao passar o mouse */
-}
-
-.box-social1:hover,
-.box-social2:hover {
-    transform: scale(1.1); /* Aumenta em 10% o tamanho ao passar o mouse */
-}
-
-.box-social1 i {
-    font-size: 2.5rem;
-    color: var(--color-white);
-}
-
-.box-social2 i {
-    font-size: 2.5rem;
-    color: var(--color-white);
+.box-social1:hover, .box-social2:hover {
+    transform: scale(1.1);
 }
 
 .box-social1:hover i {
-    color: #181717; /* Cor do ícone ao passar o mouse sobre o primeiro */
+    color: #181717; /* Cor do ícone ao passar o mouse sobre o GitHub */
 }
 
 .box-social2:hover i {
-    color: #0e76a8; /* Cor do ícone ao passar o mouse sobre o segundo */
+    color: #0e76a8; /* Cor do ícone ao passar o mouse sobre o LinkedIn */
 }
 
-
-
-/************** Skills */
+/* Estilos para as habilidades */
 .skills {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribui os itens horizontalmente */
+    align-items: center;
+    margin-bottom: 1rem; /* Espaçamento inferior */
+
+    /* Ajustes para mobile */
+    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
 }
 
 .content-skills {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -275,8 +182,8 @@ body {
     max-width: 90%;
     gap: 10px; /* Espaço entre os ícones */
     display: flex;
-    justify-content: center; /* Alinhar os ícones ao centro */
-    flex-wrap: wrap; /* Quebra os ícones para uma nova linha se não couberem */
+    justify-content: center; /* Centraliza os ícones */
+    flex-wrap: wrap; /* Quebra para várias linhas em telas menores */
 }
 
 .skills-icons i {
@@ -290,7 +197,7 @@ body {
     cursor: pointer;
 }
 
-/* Cores específicas para cada ícone das skills */
+
 .skills-icons .fa-html5:hover {
     color: #e34f26;
 }
@@ -311,18 +218,16 @@ body {
     color: #181717;
 }
 
-
-/************** WIDGET 3 */
+/* WIDGET 3 */
 .bottom {
     width: 100%;
-    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-/************** Contato */
+/* Contato */
 .contato {
     width: 100%;
     border-radius: 10px;
@@ -332,12 +237,12 @@ body {
     justify-content: center;
     text-align: center;
     background-color: var(--color-destaque);
-    padding: 1rem;
+    padding: 1.5rem; /* Ajuste o padding conforme necessário */
 }
 
 .content-contato {
     width: 100%;
-    max-width: 400px;
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,24 +252,25 @@ body {
 }
 
 .text-contato h1 {
-    font-size: var(--font-title-mobile);
+    font-size: 1.2rem; /* Ajuste o tamanho conforme necessário */
     color: var(--color-white);
 }
 
 .lista-contato {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem; /* Espaço entre os itens da lista */
 }
 
 .lista-contato a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
 }
 
 .text-contato span {
-    font-size: var(--font-text-mobile);
+    font-size: 1rem; /* Ajuste o tamanho conforme necessário */
     font-weight: 400;
     color: var(--color-white);
 }
@@ -378,10 +284,46 @@ body {
 }
 
 .btn2 {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: #007bff;
+    color: #fff;
     font-weight: 600;
     padding: .7rem 1.3rem;
     border-radius: 10px;
     text-decoration: none;
 }
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .skills {
+        padding: 2rem; /* Ajuste o padding conforme necessário */
+    }
+
+    .content-skills {
+        gap: 1rem;
+    }
+
+    .skills-icons i {
+        font-size: 1.2rem;
+    }
+
+    .contato {
+        padding: 2rem; /* Ajuste o padding conforme necessário */
+    }
+
+    .text-contato h1 {
+        font-size: 1.1rem;
+    }
+
+    .lista-contato a {
+        font-size: 0.9rem;
+    }
+
+    .text-contato span {
+        font-size: 0.9rem;
+    }
+
+    .btn2 {
+        padding: 0.7rem 1rem;
+    }
+}
+
