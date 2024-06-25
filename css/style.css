@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 60%;
     max-width: 1800px;
     padding: 1rem;
     display: flex;
@@ -57,6 +57,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    height: 60%;
+    
     
 }
 
@@ -67,48 +69,42 @@ body {
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 1.5rem 1rem; 
 }
 
 .content-user {
-    width: 100%;
-    max-width: 90%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .img-user {
-    display: flex;
-    align-items: right;
-    justify-content: center;
+    margin-right: 1rem;
 }
 
 .img-user img {
-    width: 1px;
-    border-radius: 10px;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px;
+    border-radius: 50%; /* Torna a imagem redonda */
 }
 
 .info-user {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .info-user h1 {
-    padding-top: 1rem;
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 1.6rem;
     font-weight: bold;
     color: white;
 }
 
 .info-user span {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--color-destaque);
 }
@@ -195,32 +191,58 @@ body {
     gap: 1rem;
 }
 
-
-.box-social {
-    background-color: var(--color-destaque);
+.box-social1 {
+    background-color: var(--color-white);
     height: 90px;
     width: 180px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+    transition: transform 0.3s, background-color 0.3s; /* Transição suave de transformação e cor de fundo */
+}
+.box-social2 {
+    background-color: var(--color-white);
+    height: 90px;
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s; /* Transição suave de transformação e cor de fundo */
 }
 
 .box-social i {
     font-size: 2.5rem;
     color: var(--color-white);
+    transition: color 0.3s; /* Transição suave da cor do ícone */
 }
 
 .box-social:hover {
     background-color: var(--color-white); /* Cor de fundo ao passar o mouse */
-    transform: scale(1.1); /* Aumenta em 10% o tamanho */
 }
 
+.box-social1:hover,
+.box-social2:hover {
+    transform: scale(1.1); /* Aumenta em 10% o tamanho ao passar o mouse */
+}
 
+.box-social1 i {
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
 
-.box-social:hover {
-    animation: bounce 0.1s ease;
+.box-social2 i {
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+
+.box-social1:hover i {
+    color: #181717; /* Cor do ícone ao passar o mouse sobre o primeiro */
+}
+
+.box-social2:hover i {
+    color: #0e76a8; /* Cor do ícone ao passar o mouse sobre o segundo */
 }
 
 

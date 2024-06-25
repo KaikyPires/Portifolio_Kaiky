@@ -1,228 +1,207 @@
-@media (min-width: 768px) and (max-width: 999px) {
-    .servicos-box {
-        flex-direction: row;
-    }
-}
-
+/* Estilos para telas maiores que 1000px */
 @media (min-width: 1000px) {
     body {
-        height: 100vh;
+        min-height: 100vh; /* Altura mínima da viewport */
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
-        background-color: #141414; /* Ajuste a cor de fundo conforme necessário */
+        padding: 20px; /* Espaço ao redor do conteúdo */
+        background-color: #141414; /* Cor de fundo */
     }
 
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:  #141414; /* Ajuste a cor de fundo do container conforme necessário */
-        padding: 1rem;
+        background-color: #000; /* Cor de fundo do container */
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        max-width: 400px; /* Define uma largura máxima */
-        width: 100%;
+        box-shadow: 0 0 10px rgba(45, 44, 44, 0.5);
+        width: 400px; /* Largura fixa do container */
+        max-width: 90%; /* Largura máxima do container */
+        min-width: 320px; /* Largura mínima do container */
+        padding: 0.5rem; /* Espaçamento interno */
     }
-    
+
+    /* Estilos para os elementos internos do .container */
     .top, .center, .bottom {
-        width: 100%;
-        height: 30%;
+        width: 90%; /* Largura dos componentes */
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
-    
-    .top {
-        margin-bottom: 1rem;
-    }
-    
+
+    /* Estilos para a seção de usuário */
     .user {
-        display: flex; /* Para alinhar conteúdo em linha */
-        flex-direction: column; /* Para garantir que a imagem e o texto fiquem um em cima do outro */
-        align-items: center;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    .user .content-user {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        text-align: left;
+        margin-bottom: 1rem;
+        gap: 1rem; /* Espaçamento entre itens */
     }
-    
+
+    /* Ajustes na imagem do usuário */
     .user .img-user {
-        margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+        margin-bottom: 0; /* Remove margem inferior da imagem */
     }
-    
+
+    /* Configurações da imagem */
     .user img {
-        width: 120px; /* Ajuste o tamanho da imagem conforme necessário */
-        height: 120px; /* Ajuste o tamanho da imagem conforme necessário */
-        border-radius: 50%; /* Para fazer a imagem circular */
+        width: 50px; /* Tamanho da imagem do usuário */
+        height: 50px;
+        border-radius: 50%; /* Imagem circular */
     }
-    
-    .info-user {
-        text-align: center;
-    }
-    
+
+    /* Estilos do título */
     .info-user h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+        font-size: 1.1rem; /* Tamanho do título */
+        margin-bottom: 0.2rem; /* Espaçamento inferior */
     }
-    
+
+    /* Estilos do texto secundário */
     .info-user span {
-        font-size: 1.5rem;
+        font-size: 1rem; /* Tamanho do texto secundário */
         color: #888; /* Cor do texto secundário */
     }
-    
-    .info-user p {
-        font-size: 1.2rem;
-        color: #666; /* Cor do texto adicional */
-    }
-    
-    .projeto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
 
-    .projeto img {
-        width: 100px;
-        height: auto;
-        margin-bottom: 0.5rem;
-    }
-
-    .btn-projeto a {
-        text-decoration: none;
-        color: #fff;
-        background-color: #28a745;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-
+    /* Configurações para as redes sociais */
     .redes-sociais {
         display: flex;
         justify-content: center;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+        gap: 0.8rem; /* Espaçamento entre ícones */
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Tamanho e cor dos ícones */
     .redes-sociais i {
-        font-size: 1.5rem;
-        color: #fff;
+        font-size: 1.5rem; /* Tamanho dos ícones */
+        color: #fff; /* Cor dos ícones */
     }
 
+    /* Estilos para as habilidades */
     .skills {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Texto das habilidades */
     .text-skills span {
-        font-size: 1.2rem;
-        color: #fff;
-        margin-bottom: 0.5rem;
+        font-size: 1.2rem; /* Tamanho do texto */
+        color: #fff; /* Cor do texto */
+        margin-bottom: 0.5rem; /* Espaçamento inferior */
     }
 
+    /* Ícones das habilidades */
     .skills-icons {
         display: flex;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.5rem; /* Espaçamento entre ícones */
     }
 
+    /* Tamanho e cor dos ícones */
     .skills-icons i {
-        font-size: 1.5rem;
-        color: #fff;
+        font-size: 1.5rem; /* Tamanho dos ícones */
+        color: #fff; /* Cor dos ícones */
     }
 
+    /* Serviços */
     .servicos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Título dos serviços */
     .text-servicos h1 {
-        font-size: 1.5rem;
-        color: #fff;
+        font-size: 1.5rem; /* Tamanho do título */
+        color: #fff; /* Cor do texto */
     }
 
+    /* Texto dos serviços */
     .text-servicos span {
-        font-size: 1rem;
-        color: #aaa;
+        font-size: 1rem; /* Tamanho do texto */
+        color: #aaa; /* Cor do texto */
         text-align: center;
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Caixa de serviços */
     .servicos-box {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
+        gap: 1rem; /* Espaçamento entre itens */
         justify-content: center;
     }
 
+    /* Item de serviço */
     .item-servico {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px;
+        width: 80px; /* Largura do item de serviço */
+        height: 80px; /* Altura do item de serviço */
+        border-radius: 10px; /* Borda arredondada */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #444; /* Ajuste a cor de fundo do item de serviço conforme necessário */
-        color: #fff; /* Ajuste a cor do texto conforme necessário */
+        background-color: #444; /* Cor de fundo */
+        color: #fff; /* Cor do texto */
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Tamanho do texto */
     }
-    
+
+    /* Ícone do serviço */
     .item-servico i {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.2rem; /* Tamanho do ícone */
+        margin-bottom: 0.5rem; /* Espaçamento inferior */
     }
 
+    /* Texto do serviço */
     .item-servico span {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Tamanho do texto */
     }
 
+    /* Contato */
     .contato {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Título do contato */
     .text-contato h1 {
-        font-size: 1.5rem;
-        color: #fff;
+        font-size: 1.5rem; /* Tamanho do título */
+        color: #fff; /* Cor do texto */
     }
 
+    /* Texto do contato */
     .text-contato span {
-        font-size: 1rem;
-        color: #aaa;
+        font-size: 1rem; /* Tamanho do texto */
+        color: #aaa; /* Cor do texto */
         text-align: center;
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Espaçamento inferior */
     }
 
+    /* Lista de contato */
     .lista-contato a {
-        color: #fff;
+        color: #fff; /* Cor do texto */
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Espaçamento inferior */
         display: block;
     }
 
+    /* Botão de contato */
     .btn-contato a {
         text-decoration: none;
-        color: #fff;
-        background-color: #007bff;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        font-size: 1rem;
+        color: #fff; /* Cor do texto */
+        background-color: #007bff; /* Cor de fundo do botão */
+        padding: 0.5rem 1rem; /* Espaçamento interno do botão */
+        border-radius: 5px; /* Borda arredondada */
+        font-size: 1rem; /* Tamanho do texto */
     }
 }
